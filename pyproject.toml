@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudmesh-ai-jupyter"
+
+dynamic = ["version"]
+description = "Extension jupyter created by CME"
+license = "Apache-2.0"
+dependencies = [
+    "cloudmesh-ai-cmc",
+    "cloudmesh-ai-common",
+    "cloudmesh-cmd5",
+    "cloudmesh-sys",
+    "cloudmesh-inventory",
+    "cloudmesh-configuration",
+    "yamldb",
+    "click",
+    "rich",
+    "pytest",
+]
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+
+[project.entry-points."cloudmesh.ai.command"]
+jupyter = "command.jupyter:register"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["command*"]
