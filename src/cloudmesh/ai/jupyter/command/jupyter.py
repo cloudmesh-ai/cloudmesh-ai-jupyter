@@ -1,12 +1,11 @@
 from cloudmesh.shell.command import command
 from cloudmesh.shell.command import PluginCommand
-from cloudmesh.common.console import Console
-from cloudmesh.common.util import path_expand
-from cloudmesh.common.util import backup_name
-from cloudmesh.common.util import yn_choice
+from cloudmesh.ai.common.console import Console
+from cloudmesh.ai.common.io import path_expand, console as io_console
+from cloudmesh.ai.common.util import backup_name
 from pprint import pprint
-from cloudmesh.common.debug import VERBOSE
-from cloudmesh.common.Printer import Printer
+from cloudmesh.ai.common.debug import VERBOSE
+from cloudmesh.ai.common.Printer import Printer
 import os
 from cloudmesh.jupyter.Jupyter import Jupyter
 
@@ -95,7 +94,7 @@ class JupyterCommand(PluginCommand):
             print ("Generate backup")
             print (f"From: {data.cwd}")
             print (f"To:   {data.backup}")
-            if yn_choice("Continue"):
+            if io_console.ynchoice("Continue"):
                 os.system(f"cp -r -v {data.cwd} {data.backup}")
                 Console.ok(f"Backup created at: {data.backup}")
 

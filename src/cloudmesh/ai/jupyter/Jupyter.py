@@ -1,11 +1,11 @@
 import os
-from cloudmesh.common.Shell import Shell
+from cloudmesh.ai.common.Shell import Shell
 # from yamldb import YamlDB
 from subprocess import Popen
-from cloudmesh.common.util import path_expand
+from cloudmesh.ai.common.util import path_expand
 from subprocess import PIPE
 from subprocess import STDOUT
-from cloudmesh.common.dotdict import dotdict
+from cloudmesh.ai.common.dotdict import dotdict
 import shlex
 from pathlib import Path
 
