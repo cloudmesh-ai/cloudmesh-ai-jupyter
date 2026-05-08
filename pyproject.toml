@@ -7,7 +7,7 @@ name = "cloudmesh-ai-jupyter"
 
 dynamic = ["version"]
 description = "Extension jupyter created by CME"
-license = "Apache-2.0"
+license = {text = "Apache-2.0"}
 dependencies = [
     "cloudmesh-ai-cmc",
     "cloudmesh-ai-common",
