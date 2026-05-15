@@ -4,4 +4,4 @@ This page provides the API reference for the `cloudmesh-ai-jupyter` library.
 
 ## API Documentation
 
-::: cloudmesh.ai.__init__
+::: cloudmesh.ai.jupyter
